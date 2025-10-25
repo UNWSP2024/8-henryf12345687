@@ -1,3 +1,6 @@
+# Henry Forst
+#Week 8 programs
+#10/24/2025
 # Program #1: Initials
 # Write a program that gets a string containing a person's first, middle, and last names, 
 # and displays their first, middle, and last initials.  
@@ -5,15 +8,12 @@
 
 # Add your logic starting on line 11
 
-def initials_generator(personsName):
+def initials_generator():
 
-    personsInitials = ""
+    personsName = input('Enter the users first, middle, and last name: ')
     #    Add your logic here
-
-    return personsInitials.strip()
-
-personsName = input('Enter the users first, middle, and last name')
-
-initials = initials_generator(personsName)
-
-print(initials)
+    initials = personsName.split()
+    for string in initials:
+        print(string[0].upper(),sep='',end='')
+        print('.',sep = '', end = '')
+initials_generator()
